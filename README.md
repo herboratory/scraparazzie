@@ -17,7 +17,7 @@ $ pip install scraparazzie
 ```
 
 ## Usage
-The whole 
+Application of this package is similar as gnewsclient:
 - Create a NewsClient object:
     For specific topic:
     ```python
