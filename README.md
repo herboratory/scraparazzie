@@ -84,8 +84,7 @@ Application of this package is similar as gnewsclient:
     ------------------------------------------------------------
     ```
 
-- Export as list
-    Items can be export as list by using client.export_news():
+- Export as list - Items can be export as list by using client.export_news():
 
     ```python
     >>> items = client.export_news()
