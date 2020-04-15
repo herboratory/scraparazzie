@@ -133,3 +133,6 @@ Application of this package is similar as gnewsclient:
 
 1.2.4:
 - Fixed a very important bug
+
+1.2.5:
+- Fixed important bug
