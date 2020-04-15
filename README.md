@@ -1,4 +1,4 @@
-[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.org/project/scraparazzie/1.2.2/)
+[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.org/project/scraparazzie/1.2.3/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/herboratory/scaparazzie/blob/master/LICENSE.txt)
 
 # scraparazzie
