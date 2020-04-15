@@ -1,4 +1,4 @@
-[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.python.org/pypi/gnewsclient)
+[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.org/project/scraparazzie/1.2.2/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/herboratory/scaparazzie/blob/master/LICENSE.txt)
 
 # scraparazzie
@@ -18,16 +18,17 @@ $ pip install scraparazzie
 
 ## Usage
 Application of this package is similar as gnewsclient:
+
 - Create a NewsClient object:
     For specific topic:
     ```python
     >>> from scraparazzie import scraparazzie
-    >>> client = scraparazzie.NewsClient(language = 'english', location = 'Canada', topic = 'Business', max_results = 5)
+    >>> client = scraparazzie.NewsClient(language = 'english', location = 'Canada', topic = 'Business', max_results = 3)
     ```
     For keyword query: 
     ```python
     >>> from scraparazzie import scraparazzie
-    >>> client = scraparazzie.NewsClient(language = 'english', location = 'Canada', query = 'corn', max_results = 5)
+    >>> client = scraparazzie.NewsClient(language = 'english', location = 'Canada', query = 'corn', max_results = 3)
     ```
 - Get current parameter settings
     ```python
@@ -38,26 +39,21 @@ Application of this package is similar as gnewsclient:
 - Get news feed
     ```python
     >>> client.print_news()
-    All forms of corn exports key to industry, economist says
-    Successful Farming
-    https://www.agriculture.com/news/crops/all-forms-of-corn-exports-key-to-industry-economist-says
-    Tue, 14 Apr 2020 19:59:57 GMT
-    Second 2020 Crop Progress Report: Corn at 3% Planted
-    Farm Equipment Publication
-    https://www.farm-equipment.com/articles/18213-second-2020-crop-progress-report-corn-at-3-planted
-    Tue, 14 Apr 2020 19:20:00 GMT
-    Can the Market Handle 3 Billion Bushels of New Crop Corn Carryout?
-    AgWeb
-    https://www.agweb.com/article/can-market-handle-3-billion-bushels-new-crop-corn-carryout
-    Tue, 14 Apr 2020 16:04:00 GMT
-    Corn School: Get a jump on spring weed control
-    RealAgriculture
-    https://www.realagriculture.com/2020/04/corn-school-get-a-jump-on-spring-weed-control/
-    Tue, 14 Apr 2020 11:40:00 GMT
-    How COVID-19 Is Impacting The Ethanol And Corn Producers
-    Forbes
-    https://www.forbes.com/sites/rrapier/2020/04/12/how-covid-19-is-impacting-the-ethanol-and-corn-producers/
-    Sun, 12 Apr 2020 22:07:29 GMT  
+    Corn Acres Should Be Reconsidered in 2020
+    Farm Bureau News
+    https://www.fb.org/market-intel/corn-acres-should-be-reconsidered-in-2020
+    Wed, 15 Apr 2020 14:03:04 GMT
+    ------------------------------------------------------------
+    Plant 2020 Questions (Have you seen Corn, Durum Prices?)
+    FarmLead
+    https://farmlead.com/blog/breakfast-brief/plant-2020-april-durum-prices/
+    Wed, 15 Apr 2020 14:00:41 GMT
+    ------------------------------------------------------------
+    Good year for growing, but corn $$$ low
+    Quinte News
+    https://www.quintenews.com/2020/04/15/good-year-for-growing-but-corn-low/
+    Wed, 15 Apr 2020 10:07:48 GMT
+    ------------------------------------------------------------
     ```
 
 - Changing parameters
@@ -69,26 +65,30 @@ Application of this package is similar as gnewsclient:
     >>> client.topic = 'Business'
     >>> client.query = 'corn'
     >>> client.print_news()
-    All forms of corn exports key to industry, economist says
-    Successful Farming
-    https://www.agriculture.com/news/crops/all-forms-of-corn-exports-key-to-industry-economist-says
-    Tue, 14 Apr 2020 19:59:57 GMT
-    Second 2020 Crop Progress Report: Corn at 3% Planted
-    Farm Equipment Publication
-    https://www.farm-equipment.com/articles/18213-second-2020-crop-progress-report-corn-at-3-planted
-    Tue, 14 Apr 2020 19:20:00 GMT
-    Can the Market Handle 3 Billion Bushels of New Crop Corn Carryout?
-    AgWeb
-    https://www.agweb.com/article/can-market-handle-3-billion-bushels-new-crop-corn-carryout
-    Tue, 14 Apr 2020 16:04:00 GMT
-    Corn School: Get a jump on spring weed control
-    RealAgriculture
-    https://www.realagriculture.com/2020/04/corn-school-get-a-jump-on-spring-weed-control/
-    Tue, 14 Apr 2020 11:40:00 GMT
-    How COVID-19 Is Impacting The Ethanol And Corn Producers
-    Forbes
-    https://www.forbes.com/sites/rrapier/2020/04/12/how-covid-19-is-impacting-the-ethanol-and-corn-producers/
-    Sun, 12 Apr 2020 22:07:29 GMT  
+    Corn Acres Should Be Reconsidered in 2020
+    Farm Bureau News
+    https://www.fb.org/market-intel/corn-acres-should-be-reconsidered-in-2020
+    Wed, 15 Apr 2020 14:03:04 GMT
+    ------------------------------------------------------------
+    Plant 2020 Questions (Have you seen Corn, Durum Prices?)
+    FarmLead
+    https://farmlead.com/blog/breakfast-brief/plant-2020-april-durum-prices/
+    Wed, 15 Apr 2020 14:00:41 GMT
+    ------------------------------------------------------------
+    Good year for growing, but corn $$$ low
+    Quinte News
+    https://www.quintenews.com/2020/04/15/good-year-for-growing-but-corn-low/
+    Wed, 15 Apr 2020 10:07:48 GMT
+    ------------------------------------------------------------
+    ```
+
+- Export as list
+    Items can be export as list by using client.export_news():
+
+    ```python
+    >>> items = client.export_news()
+    >>> print(items)
+    [{'title': 'Corn Acres Should Be Reconsidered in 2020', 'source': 'Farm Bureau News', 'link': 'https://www.fb.org/market-intel/corn-acres-should-be-reconsidered-in-2020', 'publish_date': 'Wed, 15 Apr 2020 14:03:04 GMT'}, {'title': 'Plant 2020 Questions (Have you seen Corn, Durum Prices?)', 'source': 'FarmLead', 'link': 'https://farmlead.com/blog/breakfast-brief/plant-2020-april-durum-prices/', 'publish_date': 'Wed, 15 Apr 2020 14:00:41 GMT'}, {'title': 'Good year for growing, but corn $$$ low', 'source': 'Quinte News', 'link': 'https://www.quintenews.com/2020/04/15/good-year-for-growing-but-corn-low/', 'publish_date': 'Wed, 15 Apr 2020 10:07:48 GMT'}]
     ```
 
 - Get list of available locations, languages and topics
@@ -117,3 +117,12 @@ Application of this package is similar as gnewsclient:
      'Science',
      'Health']
     ```
+
+# Change log
+
+1.2.1：
+- Readme.md revision
+
+1.2.2：
+- Export list
+- Readme.md revision
