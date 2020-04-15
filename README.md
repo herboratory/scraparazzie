@@ -5,7 +5,9 @@
 
 Here I would like to special thank for [Nikhil Kumar Singh](https://github.com/nikhilkumarsingh)'s work.
 
-This package is based on the package [gnewsclient](https://github.com/nikhilkumarsingh/gnewsclient) for modification. which is also an easy-to-use python client for [Google News feeds](https://news.google.com/). This package offers specific topic feeds and keyword query, and the result shows from latest to oldeest datetime order.
+This package is based on the package [gnewsclient](https://github.com/nikhilkumarsingh/gnewsclient) for modification. which is also an easy-to-use python client for [Google News feeds](https://news.google.com/). This package offers specific topic feeds and keyword query, and the result shows from latest to oldeest datetime order. 
+
+Warm reminder: Please install the latest version of the package. I will keep checking the package and update if I find any bugs to confirm it can run correctly. If there's any bug and error, please feel free to put it in issue.
 
 For other services and projects, please visit: https://herboratory.ai/.
 
@@ -126,3 +128,9 @@ Application of this package is similar as gnewsclient:
 1.2.2：
 - Export list
 - Readme.md revision
+
+1.2.3:
+- Readme.md revision
+
+1.2.4:
+- Fixed a very important bug
