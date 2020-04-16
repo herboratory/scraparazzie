@@ -136,3 +136,6 @@ Application of this package is similar as gnewsclient:
 
 1.2.5:
 - Fixed important bug
+
+1.2.6
+- improvement for better search experience
