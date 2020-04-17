@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+scraparazzie/package_test.py
+scraparazzie/scraparazzie.py
+scraparazzie/utils.py
+scraparazzie.egg-info/PKG-INFO
+scraparazzie.egg-info/SOURCES.txt
+scraparazzie.egg-info/dependency_links.txt
+scraparazzie.egg-info/entry_points.txt
+scraparazzie.egg-info/not-zip-safe
+scraparazzie.egg-info/requires.txt
+scraparazzie.egg-info/top_level.txt
