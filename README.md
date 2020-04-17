@@ -1,13 +1,11 @@
-[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.org/project/scraparazzie/1.2.3/)
+[![PyPI](https://img.shields.io/badge/PyPi-v1.12-f39f37.svg)](https://pypi.org/project/scraparazzie/1.2.7/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/herboratory/scaparazzie/blob/master/LICENSE.txt)
 
 # scraparazzie
 
 Here I would like to special thank for [Nikhil Kumar Singh](https://github.com/nikhilkumarsingh)'s work.
 
-This package is based on the package [gnewsclient](https://github.com/nikhilkumarsingh/gnewsclient) for modification. which is also an easy-to-use python client for [Google News feeds](https://news.google.com/). This package offers specific topic feeds and keyword query, and the result shows from latest to oldeest datetime order. 
-
-Warm reminder: Please install the latest version of the package. I will keep checking the package and update if I find any bugs to confirm it can run correctly. If there's any bug and error, please feel free to put it in issue.
+This package is based on the package [gnewsclient](https://github.com/nikhilkumarsingh/gnewsclient) for modification. which is also an easy-to-use python client for [Google News feeds](https://news.google.com/). This package offers specific topic feeds and keyword query, and the result shows from latest to oldeest datetime order.
 
 For other services and projects, please visit: https://herboratory.ai/.
 
@@ -84,7 +82,8 @@ Application of this package is similar as gnewsclient:
     ------------------------------------------------------------
     ```
 
-- Export as list - Items can be export as list by using client.export_news():
+- Export as list
+    Items can be export as list by using client.export_news():
 
     ```python
     >>> items = client.export_news()
@@ -118,6 +117,10 @@ Application of this package is similar as gnewsclient:
      'Science',
      'Health']
     ```
+# Tips for searching
+1. For better result of topics seraching, please set the language as local/native language of the location, e.g. 'chinese traditional' for 'Hong Kong', 'english' for United Kingdom instead of 'english' for 'Hong Kong', 'chinese traditional' for "United Kingdom'.
+
+2. For better searching of non-local/native language new of the location, for example searching English news of Hong Kong, please use search feature, e.g. query = "South China Morning Post", query = "Hong Kong Standard". The result can be shown if you search like query = "South China Morning Post Hong Kong Standard", but not as good as search individually. It is also available to search with specific keywords, e.g. query = "South China Morning Post virus", query = "Hong Kong Standard virus".
 
 # Change log
 
@@ -132,10 +135,15 @@ Application of this package is similar as gnewsclient:
 - Readme.md revision
 
 1.2.4:
-- Fixed a very important bug
+- Fixed important bug
 
-1.2.5:
+1.2.5
 - Fixed important bug
 
 1.2.6
 - improvement for better search experience
+
+1.2.7
+- Fixed the bug that is unable to load data
+- Fixed the bug in query feature
+- Update README.md with searching tips
